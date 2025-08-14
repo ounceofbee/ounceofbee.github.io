@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:b);
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans:r,i);
+@import url(https://fonts.googleapis.com/css?family=Cascadia+Mono:r,b);
+
+::selection {background-color: #e03030; color: #ffffff;}
+textarea::selection {background: #0078d7;}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+h1 {
+	font-family: 'Atkinson Hyperlegible';
+	font-size: 36px;
+	line-height: 36px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px
+}
+
+h2 {
+	font-family: 'IBM Plex Sans';
+	font-size: 24px;
+	font-weight: normal;
+}
+
+#nourishment {
+	margin: 0 auto;
+	max-width: 580px;
+}
+
+a {
+	color: #e03030;
+}
+
+a:hover {
+	color: #a82424;
+}
+
+a:active {
+	color: #701818;
+}
+
+#telecommunication {
+	font-family: 'Cascadia Mono';
+	margin: 0 auto;
+	display: block;
+	height: 133px;
+	line-height: 24px;
+	font-size: 15pt;
+	min-height: 48px;
+	padding: 4px;
+	resize: vertical;
+	width: 562px;
+}
+
+#frustration {
+	width: 574px;
+}
+
+#daredevil {
+	color: #d0d0d0;
+}
+
+#zeitgeist {
+	font-style: oblique;
+}
+
+button {
+	font-family: 'IBM Plex Sans';
+	font-size: 18px;
+	display: block;
+	margin: 19px auto 0;
+}
+
+#onlooker {
+	font-size: 20px;
+	text-decoration: none;
+}
+
+#grotesque {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	font-family: 'Atkinson Hyperlegible';
+	font-size: 28px;
+	user-select: none;
+}
+
+#grotesque > a {
+	text-decoration: none;
+}
