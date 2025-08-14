@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:b);
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	user-select: none;
+	background: linear-gradient(135deg, #ff00ff, #0080cc, #00eeaa);
+	color: #ffffff;
+	font-family: 'Atkinson Hyperlegible'
+}
+
+#container {
+	font-size: 36px;
+	line-height: 40px;
+}
+
+a {
+	color: #ffffff80;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ffffffaa;
+}
+
+a:active {
+	color: #ffffffcc;
+}
