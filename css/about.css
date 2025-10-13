@@ -13,22 +13,25 @@ body {
 
 h1 {
 	font-family: 'Atkinson Hyperlegible';
-	font-size: 36px;
-	line-height: 36px;
+	font-size: 32px;
+	line-height: 32px;
 	text-align: center;
-	margin-top: 20px;
-	margin-bottom: 20px
+	margin: 20px auto
 }
 
 h2 {
 	font-family: 'IBM Plex Sans';
-	font-size: 24px;
-	font-weight: normal;
+	font-size: 22px;
+	line-height: 1.4;
+	font-weight: 400;
+	margin: 20px auto;
 }
 
-#nourishment {
-	margin: 0 auto;
-	max-width: 580px;
+button {
+	font-family: 'IBM Plex Sans';
+	font-size: 18px;
+	display: block;
+	margin: 19px auto 0;
 }
 
 a {
@@ -43,44 +46,24 @@ a:active {
 	color: #701818;
 }
 
-#telecommunication {
-	font-family: 'Cascadia Mono';
+#container {
 	margin: 0 auto;
-	display: block;
-	height: 133px;
-	line-height: 24px;
-	font-size: 15pt;
-	min-height: 48px;
+	max-width: 590px;
+}
+
+#messagebox {
+	width: 590px;
+	height: 140px;
+	min-height: 56px;
+	margin: 0 auto;
 	padding: 4px;
 	resize: vertical;
-	width: 562px;
-}
-
-#frustration {
-	width: 574px;
-}
-
-#daredevil {
-	color: #d0d0d0;
-}
-
-#zeitgeist {
-	font-style: oblique;
-}
-
-button {
-	font-family: 'IBM Plex Sans';
-	font-size: 18px;
-	display: block;
-	margin: 19px auto 0;
-}
-
-#onlooker {
+	font-family: 'Cascadia Mono';
 	font-size: 20px;
-	text-decoration: none;
+	line-height: 1.4;
 }
 
-#grotesque {
+#back {
 	position: fixed;
 	top: 20px;
 	left: 20px;
@@ -89,6 +72,14 @@ button {
 	user-select: none;
 }
 
-#grotesque > a {
+#back > a {
 	text-decoration: none;
+}
+
+#gray {
+	color: #d0d0d0;
+}
+
+#cursive {
+	font-style: oblique;
 }
