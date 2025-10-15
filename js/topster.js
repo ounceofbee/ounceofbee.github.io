@@ -116,7 +116,7 @@ const content = {
 		imageURL: '../img/topster/17.png',
 		title: 'Bleach',
 		artist: 'Nirvana',
-		info: '1989 • 13 songs • 42:45',
+		info: '1989 • 11 songs • 39:19',
 	},
 	eighteen: {
 		rank: '#18',
