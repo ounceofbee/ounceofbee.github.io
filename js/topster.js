@@ -116,7 +116,7 @@ const content = {
 		imageURL: '../img/topster/17.png',
 		title: 'Bleach',
 		artist: 'Nirvana',
-		info: '1989 • 11 songs • 39:19',
+		info: '1989 • 11 songs • 37:19',
 	},
 	eighteen: {
 		rank: '#18',
@@ -543,7 +543,7 @@ const content = {
 		imageURL: '../img/topster/78.png',
 		title: 'You\'re Living All Over Me',
 		artist: 'Dinosaur Jr.',
-		info: '1987 • 9 songs • 35:56',
+		info: '1987 • 10 songs • 38:49',
 	},
 	seventynine: {
 		rank: '#79',
