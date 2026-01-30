@@ -1,34 +1,201 @@
-@import url(https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:b);
+@import url(https://fonts.googleapis.com/css?family=Cascadia+Mono:300,600);
+
+:root {
+	--max-size: 96px;
+}
 
 body {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	width: 100%;
-	height: 100vh;
+	flex-direction: row;
 	margin: 0;
-	user-select: none;
-	background: linear-gradient(135deg, #ff00ff, #0080cc, #00eeaa);
+	background-color: #080808;
 	color: #ffffff;
-	font-family: 'Atkinson Hyperlegible'
+	font-family: 'Cascadia Mono';
+	font-weight: 300;
+	line-height: 1.5;
 }
 
-#container {
-	font-size: 36px;
-	line-height: 40px;
+#grid {
+	display: grid;
+	grid-template-columns: repeat(10, var(--max-size));
+	margin: 37px;
+	padding: 4px;
+	gap: 4px;
+	background-color: #000000;
+	border: 1px solid #ffffff;
+	cursor: pointer;
+}
+
+#grid > div {
+	width: var(--max-size);
+	height: var(--max-size);
+	background-size: var(--max-size);
+	background-color: #303030;
+}
+
+#darkwhite {
+	color: #c0c0c0;
+}
+
+#info-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 384px;
+	height: fit-content;
+	margin-top: 37px;
+	margin-right: 36px;
+	background-color: #ffffff;
+	position: sticky;
+	top: 37px;
+}
+
+#cover-box {
+	width: 384px;
+	height: 384px;
+	border: 1px solid #ffffff;
+}
+
+#cover-image {
+	display: none;
+}
+
+#info-box {
+	display: block;
+	width: 344px;
+	background-color: #000000;
+	border: 1px solid #ffffff;
+	border-top: none;
+	text-align: center;
+	color: #505050;
+	font-size: 22px;
+	padding: 20px;
+}
+
+#noneselected {
+	font-size: 22px;
+}
+
+#idk {
+	font-size: 22px;
+	text-align: left;
+	color: #ffffff;
+}
+
+#rank, #title {
+	font-weight: 600;
+}
+
+#fine-print {
+	font-size: 18px;
+	padding: 20px;
+	background-color: #080808;
+	text-align: center;
+	color: #505050;
 }
 
 a {
-	color: #ffffff80;
 	text-decoration: none;
+	color: #ffffff;
 }
 
-a:hover {
-	color: #ffffffaa;
-}
-
-a:active {
-	color: #ffffffcc;
-}
+#one			{background-image: url(img/1.png)}
+#two			{background-image: url(img/2.png)}
+#three			{background-image: url(img/3.png)}
+#four			{background-image: url(img/4.png)}
+#five			{background-image: url(img/5.png)}
+#six			{background-image: url(img/6.png)}
+#seven			{background-image: url(img/7.png)}
+#eight			{background-image: url(img/8.png)}
+#nine			{background-image: url(img/9.png)}
+#ten			{background-image: url(img/10.png)}
+#eleven			{background-image: url(img/11.png)}
+#twelve			{background-image: url(img/12.png)}
+#thirteen		{background-image: url(img/13.png)}
+#fourteen		{background-image: url(img/14.png)}
+#fifteen		{background-image: url(img/15.png)}
+#sixteen		{background-image: url(img/16.png)}
+#seventeen		{background-image: url(img/17.png)}
+#eighteen		{background-image: url(img/18.png)}
+#nineteen		{background-image: url(img/19.png)}
+#twenty			{background-image: url(img/20.png)}
+#twentyone		{background-image: url(img/21.png)}
+#twentytwo		{background-image: url(img/22.png)}
+#twentythree	{background-image: url(img/23.png)}
+#twentyfour		{background-image: url(img/24.png)}
+#twentyfive		{background-image: url(img/25.png)}
+#twentysix		{background-image: url(img/26.png)}
+#twentyseven	{background-image: url(img/27.png)}
+#twentyeight	{background-image: url(img/28.png)}
+#twentynine		{background-image: url(img/29.png)}
+#thirty			{background-image: url(img/30.png)}
+#thirtyone		{background-image: url(img/31.png)}
+#thirtytwo		{background-image: url(img/32.png)}
+#thirtythree	{background-image: url(img/33.png)}
+#thirtyfour		{background-image: url(img/34.png)}
+#thirtyfive		{background-image: url(img/35.png)}
+#thirtysix		{background-image: url(img/36.png)}
+#thirtyseven	{background-image: url(img/37.png)}
+#thirtyeight	{background-image: url(img/38.png)}
+#thirtynine		{background-image: url(img/39.png)}
+#forty			{background-image: url(img/40.png)}
+#fortyone		{background-image: url(img/41.png)}
+#fortytwo		{background-image: url(img/42.png)}
+#fortythree		{background-image: url(img/43.png)}
+#fortyfour		{background-image: url(img/44.png)}
+#fortyfive		{background-image: url(img/45.png)}
+#fortysix		{background-image: url(img/46.png)}
+#fortyseven		{background-image: url(img/47.png)}
+#fortyeight		{background-image: url(img/48.png)}
+#fortynine		{background-image: url(img/49.png)}
+#fifty			{background-image: url(img/50.png)}
+#fiftyone		{background-image: url(img/51.png)}
+#fiftytwo		{background-image: url(img/52.png)}
+#fiftythree		{background-image: url(img/53.png)}
+#fiftyfour		{background-image: url(img/54.png)}
+#fiftyfive		{background-image: url(img/55.png)}
+#fiftysix		{background-image: url(img/56.png)}
+#fiftyseven		{background-image: url(img/57.png)}
+#fiftyeight		{background-image: url(img/58.png)}
+#fiftynine		{background-image: url(img/59.png)}
+#sixty			{background-image: url(img/60.png)}
+#sixtyone		{background-image: url(img/61.png)}
+#sixtytwo		{background-image: url(img/62.png)}
+#sixtythree		{background-image: url(img/63.png)}
+#sixtyfour		{background-image: url(img/64.png)}
+#sixtyfive		{background-image: url(img/65.png)}
+#sixtysix		{background-image: url(img/66.png)}
+#sixtyseven		{background-image: url(img/67.png)}
+#sixtyeight		{background-image: url(img/68.png)}
+#sixtynine		{background-image: url(img/69.png)}
+#seventy		{background-image: url(img/70.png)}
+#seventyone		{background-image: url(img/71.png)}
+#seventytwo		{background-image: url(img/72.png)}
+#seventythree	{background-image: url(img/73.png)}
+#seventyfour	{background-image: url(img/74.png)}
+#seventyfive	{background-image: url(img/75.png)}
+#seventysix		{background-image: url(img/76.png)}
+#seventyseven	{background-image: url(img/77.png)}
+#seventyeight	{background-image: url(img/78.png)}
+#seventynine	{background-image: url(img/79.png)}
+#eighty			{background-image: url(img/80.png)}
+#eightyone		{background-image: url(img/81.png)}
+#eightytwo		{background-image: url(img/82.png)}
+#eightythree	{background-image: url(img/83.png)}
+#eightyfour		{background-image: url(img/84.png)}
+#eightyfive		{background-image: url(img/85.png)}
+#eightysix		{background-image: url(img/86.png)}
+#eightyseven	{background-image: url(img/87.png)}
+#eightyeight	{background-image: url(img/88.png)}
+#eightynine		{background-image: url(img/89.png)}
+#ninety			{background-image: url(img/90.png)}
+#ninetyone		{background-image: url(img/91.png)}
+#ninetytwo		{background-image: url(img/92.png)}
+#ninetythree	{background-image: url(img/93.png)}
+#ninetyfour		{background-image: url(img/94.png)}
+#ninetyfive		{background-image: url(img/95.png)}
+#ninetysix		{background-image: url(img/96.png)}
+#ninetyseven	{background-image: url(img/97.png)}
+#ninetyeight	{background-image: url(img/98.png)}
+#ninetynine		{background-image: url(img/99.png)}
+#hundred		{background-image: url(img/100.png)}
