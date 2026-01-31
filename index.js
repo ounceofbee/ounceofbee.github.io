@@ -520,7 +520,7 @@ const content = {
 	seventyfive: {
 		rank: '#75',
 		imageURL: 'img/75.png',
-		title: 'PetroDragonic Apocalypse; or, Dawn of Eternal Night: An Annihilation of Planet Earth and the Beginning of Merciless Damnation',
+		title: 'PetroDragonic Apocalypse',
 		artist: 'King Gizzard & the Lizard Wizard',
 		info: '2023 • 7 songs • 48:40',
 	},
