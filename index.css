@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Cascadia+Mono:300,600);
+#cover-box > img::selection {background: transparent}
 
 :root {
 	--max-size: 96px;
