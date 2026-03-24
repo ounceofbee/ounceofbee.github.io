@@ -193,7 +193,7 @@ const content = {
 		imageURL: 'img/28.png',
 		title: 'Screamadelica',
 		artist: 'Primal Scream',
-		info: '1991 • 11 songs • 1:02:51',
+		info: '1991 • 11 songs • 1:05:04',
 	},
 	twentynine: {
 		rank: '#29',
