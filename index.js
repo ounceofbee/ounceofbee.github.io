@@ -708,14 +708,29 @@ function showInfo(clickedId) {
 	const albumTitle = document.getElementById('title');
 	const artist = document.getElementById('artist');
 	const moreInfo = document.getElementById('info');
-
 	noneSelected.style.display = "none";
 	rank.textContent = content[clickedId].rank;
 	albumTitle.textContent = content[clickedId].title;
 	artist.textContent = content[clickedId].artist;
 	moreInfo.textContent = content[clickedId].info;
-
 	document.getElementById("none").style.display = "none";
 	coverImage.src = content[clickedId].imageURL;
 	coverImage.style.display = 'block';
 }
+
+function calculateMargins() {
+	const body = document.body;
+	const grid = document.getElementById('grid');
+	const box = document.getElementById('info-container');
+	const bodyHeight = body.clientHeight;
+	const gridHeight = grid.offsetHeight;
+	const containerRect = body.getBoundingClientRect();
+	const gridRect = grid.getBoundingClientRect();
+	const topSpace = Math.max(0, (gridRect.top - containerRect.top));
+	const verticalSpace = Math.max(0, (bodyHeight - gridHeight) / 2);
+	grid.style.marginLeft = `${verticalSpace}px`;
+	grid.style.marginRight = `${verticalSpace}px`;
+	box.style.marginTop = `${topSpace}px`;
+}
+window.addEventListener('resize', calculateMargins);
+calculateMargins();

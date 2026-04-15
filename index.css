@@ -2,14 +2,32 @@
 #cover-box > img::selection {background: transparent}
 
 :root {
-	--max-size: 96px;
+	--max-size: 64px;
+	--padding: 2px;
+}
+
+@media (min-height: 851px) {
+	:root {--max-size: 80px; --padding: 3px;}
+}
+
+@media (min-height: 1022px) {
+	:root {--max-size: 96px; --padding: 4px;}
+}
+
+@media (min-height: 1177px) {
+	:root {--max-size: 112px; --padding: 5px;}
+}
+
+@media (min-height: 1348px) {
+	:root {--max-size: 128px; --padding: 6px;}
 }
 
 body {
 	display: flex;
 	flex-direction: row;
+	height: 100vh;
 	margin: 0;
-	background-color: #080808;
+	background-color: #060608;
 	color: #ffffff;
 	font-family: 'Cascadia Mono';
 	font-weight: 300;
@@ -18,10 +36,10 @@ body {
 
 #grid {
 	display: grid;
+	align-self: center;
 	grid-template-columns: repeat(10, var(--max-size));
-	margin: 37px;
-	padding: 4px;
-	gap: 4px;
+	padding: var(--padding);
+	gap: var(--padding);
 	background-color: #000000;
 	border: 1px solid #ffffff;
 	cursor: pointer;
@@ -31,24 +49,19 @@ body {
 	width: var(--max-size);
 	height: var(--max-size);
 	background-size: var(--max-size);
-	background-color: #303030;
 }
 
-#darkwhite {
-	color: #c0c0c0;
+#grid > div:hover {
+	background-color: #00000080;
+	background-blend-mode: overlay;
 }
 
 #info-container {
-	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	width: 384px;
 	height: fit-content;
-	margin-top: 37px;
-	margin-right: 36px;
-	background-color: #ffffff;
-	position: sticky;
-	top: 37px;
+	background-color: #000000;
 }
 
 #cover-box {
@@ -90,9 +103,9 @@ body {
 #fine-print {
 	font-size: 18px;
 	padding: 20px;
-	background-color: #080808;
+	background-color: #060608;
 	text-align: center;
-	color: #505050;
+	color: #404050;
 }
 
 a {
