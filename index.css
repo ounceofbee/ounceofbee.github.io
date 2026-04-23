@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Cascadia+Mono:300,600);
 #cover-box > img::selection {background: transparent}
+::selection {background: #ff2020; color: #fff}
 
 :root {
 	--max-size: 64px;
@@ -28,7 +29,7 @@ body {
 	height: 100vh;
 	margin: 0;
 	background-color: #060608;
-	color: #ffffff;
+	color: #fff;
 	font-family: 'Cascadia Mono';
 	font-weight: 300;
 	line-height: 1.5;
@@ -40,12 +41,14 @@ body {
 	grid-template-columns: repeat(10, var(--max-size));
 	padding: var(--padding);
 	gap: var(--padding);
-	background-color: #000000;
-	border: 1px solid #ffffff;
+	background-color: #000;
+	border: 1px solid #fff;
+	pointer-events: none;
 	cursor: pointer;
 }
 
 #grid > div {
+	pointer-events: auto;
 	width: var(--max-size);
 	height: var(--max-size);
 	background-size: var(--max-size);
@@ -56,18 +59,33 @@ body {
 	background-blend-mode: overlay;
 }
 
+#grid > div.selected {
+	box-sizing: border-box;
+	background-color: #000000c0;
+	background-blend-mode: overlay;
+	cursor: auto;
+}
+
+#grid > div.selected:before {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: calc(var(--max-size) / 2) solid transparent;
+	border-right: calc(var(--max-size) / 2) solid #ff2020;
+	border-bottom: calc(var(--max-size) / 2) solid transparent;
+	content: '';
+}
+
 #info-container {
-	flex-direction: column;
-	justify-content: space-between;
 	width: 384px;
 	height: fit-content;
-	background-color: #000000;
+	background-color: #000;
 }
 
 #cover-box {
 	width: 384px;
 	height: 384px;
-	border: 1px solid #ffffff;
+	border: 1px solid #fff;
 }
 
 #cover-image {
@@ -77,8 +95,8 @@ body {
 #info-box {
 	display: block;
 	width: 344px;
-	background-color: #000000;
-	border: 1px solid #ffffff;
+	background-color: #000;
+	border: 1px solid #fff;
 	border-top: none;
 	text-align: center;
 	color: #505050;
@@ -90,15 +108,13 @@ body {
 	font-size: 22px;
 }
 
-#idk {
+#someselected {
 	font-size: 22px;
 	text-align: left;
-	color: #ffffff;
+	color: #fff;
 }
 
-#rank, #title {
-	font-weight: 600;
-}
+#rank, #title {font-weight: 600}
 
 #fine-print {
 	font-size: 18px;
@@ -110,7 +126,7 @@ body {
 
 a {
 	text-decoration: none;
-	color: #ffffff;
+	color: #fff;
 }
 
 #one			{background-image: url(img/1.png)}

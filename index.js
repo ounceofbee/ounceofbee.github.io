@@ -701,7 +701,18 @@ const content = {
 	},
 };
 
-function showInfo(clickedId) {
+const grid = document.getElementById('grid');
+grid.addEventListener('click', (event) => {
+	const thisClicked = event.target;
+	if (thisClicked.tagName !== 'DIV')
+		return;
+	const lastClicked = grid.querySelector('div.selected');
+	if (lastClicked && lastClicked !== thisClicked)
+		lastClicked.classList.remove('selected');
+	thisClicked.classList.add('selected');
+});
+
+function showInfo(clickedID) {
 	const noneSelected = document.getElementById('noneselected');
 	const coverImage = document.getElementById('cover-image');
 	const rank = document.getElementById('rank');
@@ -709,12 +720,12 @@ function showInfo(clickedId) {
 	const artist = document.getElementById('artist');
 	const moreInfo = document.getElementById('info');
 	noneSelected.style.display = "none";
-	rank.textContent = content[clickedId].rank;
-	albumTitle.textContent = content[clickedId].title;
-	artist.textContent = content[clickedId].artist;
-	moreInfo.textContent = content[clickedId].info;
+	rank.textContent = content[clickedID].rank;
+	albumTitle.textContent = content[clickedID].title;
+	artist.textContent = content[clickedID].artist;
+	moreInfo.textContent = content[clickedID].info;
 	document.getElementById("none").style.display = "none";
-	coverImage.src = content[clickedId].imageURL;
+	coverImage.src = content[clickedID].imageURL;
 	coverImage.style.display = 'block';
 }
 
@@ -722,15 +733,12 @@ function calculateMargins() {
 	const body = document.body;
 	const grid = document.getElementById('grid');
 	const box = document.getElementById('info-container');
-	const bodyHeight = body.clientHeight;
-	const gridHeight = grid.offsetHeight;
 	const containerRect = body.getBoundingClientRect();
 	const gridRect = grid.getBoundingClientRect();
-	const topSpace = Math.max(0, (gridRect.top - containerRect.top));
-	const verticalSpace = Math.max(0, (bodyHeight - gridHeight) / 2);
-	grid.style.marginLeft = `${verticalSpace}px`;
-	grid.style.marginRight = `${verticalSpace}px`;
-	box.style.marginTop = `${topSpace}px`;
+	const marginSize = Math.max(0, (gridRect.top - containerRect.top));
+	grid.style.marginLeft = `${marginSize}px`;
+	grid.style.marginRight = `${marginSize}px`;
+	box.style.marginTop = `${marginSize}px`;
 }
 window.addEventListener('resize', calculateMargins);
 calculateMargins();
