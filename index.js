@@ -344,7 +344,7 @@ const content = {
 		imageURL: 'img/49.png',
 		title: 'Goo',
 		artist: 'Sonic Youth',
-		info: '1900 • 11 songs • 49:45',
+		info: '1990 • 11 songs • 49:45',
 	},
 	fifty: {
 		rank: '#50',
