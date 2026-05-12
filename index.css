@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Cascadia+Mono:300,600);
+@import url(https://fonts.googleapis.com/css?family=Cascadia+Mono:i);
 #cover-box > img::selection {background: transparent}
 ::selection {background: #ff2020; color: #fff}
 
@@ -30,7 +31,7 @@ body {
 	margin: 0;
 	background-color: #060608;
 	color: #fff;
-	font-family: 'Cascadia Mono';
+	font-family: 'Cascadia Mono', sans-serif;
 	font-weight: 300;
 	line-height: 1.5;
 }
@@ -114,7 +115,8 @@ body {
 	color: #fff;
 }
 
-#rank, #title {font-weight: 600}
+#rank, #title, #subtitle {font-weight: 600;}
+#subtitle {color: #606060; font-style: italic}
 
 #fine-print {
 	font-size: 18px;
