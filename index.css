@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Cascadia+Mono:300,600);
-@import url(https://fonts.googleapis.com/css?family=Cascadia+Mono:i);
 #cover-box > img::selection {background: transparent}
 ::selection {background: #ff2020; color: #fff}
 
@@ -115,16 +114,17 @@ body {
 	color: #fff;
 }
 
-#rank, #title, #subtitle {font-weight: 600}
-#subtitle {color: #606060}
-
 #fine-print {
 	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
 	padding: 20px;
 	background-color: #060608;
-	text-align: center;
 	color: #404050;
 }
+
+#rank, #title, #subtitle {font-weight: 600}
+#subtitle {color: #606060}
 
 a {
 	text-decoration: none;
